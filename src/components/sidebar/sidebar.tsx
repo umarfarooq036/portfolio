@@ -57,12 +57,12 @@ const Sidebar = () => {
               <i className="fa fa-briefcase" /> Portfolio
             </Link>
           </li>
-          <li onClick={handleClose}>
+          {/* <li onClick={handleClose}>
             <Link href="/blog" className={`${pathUrl == "/blog" && "active"}`}>
               <i className="fa fa-envelope" /> Blog
             </Link>
-          </li>
-          <li onClick={handleClose}>
+          </li> */}
+          <li onClick={handleClose}> 
             <Link
               href="/contact"
               className={`${pathUrl == "/contact" && "active"}`}
@@ -71,12 +71,12 @@ const Sidebar = () => {
             </Link>
           </li>
         </ul>
-        <div className="copyright">
+        {/* <div className="copyright">
           Created with ❤️ By{" "}
           <a href="http://alsiam.com" target="_blank" rel="noopener noreferrer">
             Al Siam
           </a>
-        </div>
+        </div> */}
       </div>
     </aside>
   );
