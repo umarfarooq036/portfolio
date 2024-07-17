@@ -8,7 +8,7 @@ import "../styles/theme.css";
 import Sidebar from "@/components/sidebar/sidebar";
 import Providers from "./providers";
 import ThemeSwitch from "@/components/panel/ThemeSwitch";
-import { Analytics } from "@vercel/analytics/react"
+// import { Analytics } from "@vercel/analytics/react"
 
 const inter = Inter({ subsets: ["latin"] });
 
