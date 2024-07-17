@@ -205,9 +205,6 @@
 
 // export default About;
 
-
-
-
 import type { NextPage } from "next";
 
 const About: NextPage = () => {
@@ -230,7 +227,7 @@ const About: NextPage = () => {
                   <p>
                     Hi! My name is Muhammad Umar Farooq. I am a FullStack
                     developer, and I am very passionate and dedicated to my
-                    work. With 1 year's experience as a Website and Mobile
+                    work. With 1 year of experience as a Website and Mobile
                     Developer, I have acquired the skills and knowledge
                     necessary to make your project a success. I enjoy every step
                     of the design process, from discussion and collaboration.
@@ -386,17 +383,17 @@ const About: NextPage = () => {
                             Full Stack Developer at TripDeal.pk
                           </h4>
                           <p className="timeline-text">
-                            Spearheaded the transition of Trip Deal's website
-                            from WordPress to a MERN stack (MongoDB, Express.js,
-                            React.js, Node.js) architecture to enhance
-                            performance and scalability. Utilized Next.js for
-                            frontend development, ensuring a responsive and
-                            user-friendly interface. Developed server-side
-                            components and APIs with Express.js to support
-                            dynamic content and data management. Collaborated
-                            closely with a team to integrate new features and
-                            enhancements, optimizing user interactions and data
-                            flow.
+                            Spearheaded the transition of Trip Deal&apos;s
+                            website from WordPress to a MERN stack (MongoDB,
+                            Express.js, React.js, Node.js) architecture to
+                            enhance performance and scalability. Utilized
+                            Next.js for frontend development, ensuring a
+                            responsive and user-friendly interface. Developed
+                            server-side components and APIs with Express.js to
+                            support dynamic content and data management.
+                            Collaborated closely with a team to integrate new
+                            features and enhancements, optimizing user
+                            interactions and data flow.
                           </p>
                         </div>
                         {/* Timeline Item end */}
