@@ -24,59 +24,57 @@ const Sidebar = () => {
       <div className="aside-inner">
         <div className="logo">
           <Link href="/" onClick={handleClose}>
-            Logo
+            <span className="logo-text">Umar</span>
+            <span className="logo-dot">.</span>
           </Link>
         </div>
         <ul className="nav">
           <li onClick={handleClose}>
-            <Link href="/" className={`${pathUrl == "/" && "active"}`}>
-              <i className="fa fa-home" /> Home
+            <Link href="/" className={`${pathUrl == "/" ? "active" : ""}`}>
+              <i className="fa fa-home" />
+              <span>Home</span>
             </Link>
           </li>
           <li onClick={handleClose}>
             <Link
               href="/about"
-              className={`${pathUrl == "/about" && "active"}`}
+              className={`${pathUrl == "/about" ? "active" : ""}`}
             >
-              <i className="fa fa-user" /> About
+              <i className="fa fa-user" />
+              <span>About</span>
             </Link>
           </li>
           <li onClick={handleClose}>
             <Link
               href="/services"
-              className={`${pathUrl == "/services" && "active"}`}
+              className={`${pathUrl == "/services" ? "active" : ""}`}
             >
-              <i className="fa fa-list" /> Services
+              <i className="fa fa-cogs" />
+              <span>Services</span>
             </Link>
           </li>
           <li onClick={handleClose}>
             <Link
               href="/portfolio"
-              className={`${pathUrl == "/portfolio" && "active"}`}
+              className={`${pathUrl == "/portfolio" ? "active" : ""}`}
             >
-              <i className="fa fa-briefcase" /> Portfolio
+              <i className="fa fa-briefcase" />
+              <span>Portfolio</span>
             </Link>
           </li>
-          {/* <li onClick={handleClose}>
-            <Link href="/blog" className={`${pathUrl == "/blog" && "active"}`}>
-              <i className="fa fa-envelope" /> Blog
-            </Link>
-          </li> */}
           <li onClick={handleClose}> 
             <Link
               href="/contact"
-              className={`${pathUrl == "/contact" && "active"}`}
+              className={`${pathUrl == "/contact" ? "active" : ""}`}
             >
-              <i className="fa fa-comments" /> Contact
+              <i className="fa fa-envelope" />
+              <span>Contact</span>
             </Link>
           </li>
         </ul>
-        {/* <div className="copyright">
-          Created with ❤️ By{" "}
-          <a href="http://alsiam.com" target="_blank" rel="noopener noreferrer">
-            Al Siam
-          </a>
-        </div> */}
+        <div className="sidebar-footer">
+          <p>&copy; 2024 Muhammad Umar Farooq</p>
+        </div>
       </div>
     </aside>
   );

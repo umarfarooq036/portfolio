@@ -1,102 +1,148 @@
+'use client';
+
 import type { NextPage } from "next";
+import { useState } from "react";
 
 const Contact: NextPage = () => {
+  const [formData, setFormData] = useState({
+    name: '',
+    email: '',
+    subject: '',
+    message: ''
+  });
+
+  const handleSubmit = (e: React.FormEvent) => {
+    e.preventDefault();
+    // Handle form submission
+    console.log('Form submitted:', formData);
+  };
+
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    setFormData({
+      ...formData,
+      [e.target.name]: e.target.value
+    });
+  };
+
   return (
-    <>
+    <main>
       <section className="contact section" id="contact">
         <div className="container">
-          <div className="row">
-            <div className="section-title padd-15">
-              <h2>Contact Me</h2>
-            </div>
+          <div className="section-title">
+            <h2>Contact Me</h2>
+            <p>Let's discuss your next project and bring your ideas to life</p>
           </div>
-          <div className="row">
-            {/* contact-info-item */}
-            <div className="contact-info-item padd-15">
-              <div className="icon">
-                <i className="fa fa-map-marker" />
+          
+          <div className="contact-content">
+            <div className="contact-info">
+              <div className="contact-info-item">
+                <div className="icon">
+                  <i className="fa fa-map-marker" />
+                </div>
+                <div className="info-content">
+                  <h4>Address</h4>
+                  <p>Johar Town, Lahore, Pakistan</p>
+                </div>
               </div>
-              <h4>Address</h4>
-              <p>Johar Town , Lahore</p>
+              
+              <div className="contact-info-item">
+                <div className="icon">
+                  <i className="fa fa-phone" />
+                </div>
+                <div className="info-content">
+                  <h4>Phone</h4>
+                  <p>+92 313 6304133</p>
+                </div>
+              </div>
+              
+              <div className="contact-info-item">
+                <div className="icon">
+                  <i className="fa fa-envelope" />
+                </div>
+                <div className="info-content">
+                  <h4>Email</h4>
+                  <p>umerfarooqamjad2000@gmail.com</p>
+                </div>
+              </div>
+              
+              <div className="contact-info-item">
+                <div className="icon">
+                  <i className="fa fa-globe" />
+                </div>
+                <div className="info-content">
+                  <h4>Website</h4>
+                  <p>https://portfolio-uf.vercel.app/</p>
+                </div>
+              </div>
             </div>
-            {/* contact-info-item Ended */}
-            {/* contact-info-item */}
-            <div className="contact-info-item padd-15">
-              <div className="icon">
-                <i className="fa fa-phone" />
+
+            <form className="contact-form" onSubmit={handleSubmit}>
+              <div className="form-header">
+                <h3>Send Me a Message</h3>
+                <p>I'd love to hear about your project. Send me a message and I'll get back to you as soon as possible.</p>
               </div>
-              <h4>Call Us On</h4>
-              <p>+92 313 6304133</p>
-            </div>
-            {/* contact-info-item Ended */}
-            {/* contact-info-item */}
-            <div className="contact-info-item padd-15">
-              <div className="icon">
-                <i className="fa fa-envelope" />
-              </div>
-              <h4>Email</h4>
-              <p>umerfarooqamjad2000@gmail.com</p>
-            </div>
-            {/* contact-info-item Ended */}
-          </div>
-          {/* Contact Form */}
-          <div className="row">
-            <form className="contact-form padd-15">
-              <div className="row">
-                <div className="form-item col-6 padd-15">
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Name*"
-                    />
-                  </div>
+              
+              <div className="form-grid">
+                <div className="form-group">
+                  <input
+                    type="text"
+                    name="name"
+                    className="form-control"
+                    placeholder="Your Name *"
+                    value={formData.name}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-                <div className="form-item col-6 padd-15">
-                  <div className="form-group">
-                    <input
-                      type="email"
-                      className="form-control"
-                      placeholder="Email*"
-                    />
-                  </div>
+                
+                <div className="form-group">
+                  <input
+                    type="email"
+                    name="email"
+                    className="form-control"
+                    placeholder="Your Email *"
+                    value={formData.email}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-              </div>
-              <div className="row">
-                <div className="form-item col-12 padd-15">
-                  <div className="form-group">
-                    <input
-                      type="text"
-                      className="form-control"
-                      placeholder="Subject*"
-                    />
-                  </div>
+                
+                <div className="form-group full-width">
+                  <input
+                    type="text"
+                    name="subject"
+                    className="form-control"
+                    placeholder="Subject *"
+                    value={formData.subject}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
-              </div>
-              <div className="row">
-                <div className="form-item col-12 padd-15">
-                  <div className="form-group">
-                    <textarea
-                      className="form-control"
-                      placeholder="Your Message*"
-                      defaultValue={""}
-                    />
-                  </div>
+                
+                <div className="form-group full-width">
+                  <textarea
+                    name="message"
+                    className="form-control"
+                    placeholder="Your Message *"
+                    rows={6}
+                    value={formData.message}
+                    onChange={handleChange}
+                    required
+                  />
                 </div>
               </div>
-              <div className="row">
-                <div className="col-12 padd-15">
-                  <button type="submit" className="btn">
-                    Send Message
-                  </button>
-                </div>
+              
+              <div className="form-footer">
+                <button type="submit" className="btn btn-primary">
+                  <i className="fa fa-paper-plane"></i>
+                  Send Message
+                </button>
               </div>
             </form>
           </div>
-          {/* Contact Form Ended */}
         </div>
       </section>
-    </>
+    </main>
   );
 };
 
