@@ -206,7 +206,7 @@ const Service: NextPage = () => {
                   <div className="service-overlay">
                     <div className="overlay-content">
                       <h5>Get Started</h5>
-                      <p>Let's discuss your project requirements</p>
+                      <p>Let&apos;s discuss your project requirements</p>
                       <button className="btn service-btn">
                         <i className="fa fa-arrow-right"></i>
                         Contact Me

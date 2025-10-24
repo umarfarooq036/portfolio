@@ -121,7 +121,7 @@ const About: NextPage = () => {
             <div className="about-hero">
               <div className="about-text">
                 <h2 className="about-title">
-                  I'm <span className="name-highlight">Muhammad Umar Farooq</span>
+                  I&apos;m <span className="name-highlight">Muhammad Umar Farooq</span>
                   <br />
                   <span className="role-highlight">Full‑Stack Developer</span>
                 </h2>

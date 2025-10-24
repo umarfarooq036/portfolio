@@ -30,7 +30,7 @@ const Contact: NextPage = () => {
         <div className="container">
           <div className="section-title">
             <h2>Contact Me</h2>
-            <p>Let's discuss your next project and bring your ideas to life</p>
+            <p>Let&apos;s discuss your next project and bring your ideas to life</p>
           </div>
           
           <div className="contact-content">
@@ -79,7 +79,7 @@ const Contact: NextPage = () => {
             <form className="contact-form" onSubmit={handleSubmit}>
               <div className="form-header">
                 <h3>Send Me a Message</h3>
-                <p>I'd love to hear about your project. Send me a message and I'll get back to you as soon as possible.</p>
+                <p>I&apos;d love to hear about your project. Send me a message and I&apos;ll get back to you as soon as possible.</p>
               </div>
               
               <div className="form-grid">

@@ -19,7 +19,7 @@ export default function Home() {
       setCurrentRole((prev) => (prev + 1) % roles.length);
     }, 3000);
     return () => clearInterval(interval);
-  }, []);
+  }, [roles.length]);
 
   return (
     <main>
@@ -45,7 +45,7 @@ export default function Home() {
             </div>
             
             <h1>
-              Hi, I'm <span className="name">Muhammad Umar Farooq</span>
+              Hi, I&apos;m <span className="name">Muhammad Umar Farooq</span>
             </h1>
             
             <div className="role-cycle">
